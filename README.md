@@ -95,6 +95,12 @@ Here are some use cases/examples where Next.js can be beneficial:
 
 These are just a few examples of use cases where Next.js can be beneficial. It's a versatile framework that combines the power of React with server-side rendering, static site generation, API routes, and other features to build high-performance web applications with ease.
 
+### some knowledge:
+
+The usage of export async function getServerSideProps() in Next.js is a special function that allows you to fetch data or perform server-side logic before the component is rendered on the server-side. This function runs on the server-side during the build process or on every incoming request, depending on the deployment configuration.
+
+It allows you to fetch data from an API, interact with databases, or perform any server-side operations. The fetched data is then passed as props to the component, ensuring that the data is available when the page is rendered on the server-side. This enables you to pre-render dynamic data and provide a fully rendered HTML page to the client.
+
 ### suggestions on To-dos:
 
 1 change current pictures

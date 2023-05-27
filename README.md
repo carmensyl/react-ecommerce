@@ -14,6 +14,22 @@ Out of the box, the site uses completely static data coming from a provider at `
 $ git clone https://github.com/bladerunnersde/ecommerce.git
 ```
 
+```sh
+cd <repository_directory>
+```
+
+Create a new branch:
+
+```sh
+git checkout -b <new_branch_name>
+```
+
+Replace <new_branch_name> with a meaningful name for your branch. For example, if you are working on a feature called "user-authentication", you can use:
+
+```sh
+git checkout -b feature/user-authentication
+```
+
 2. Install the dependencies:
 
 ```sh

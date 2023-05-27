@@ -74,3 +74,13 @@ As it is set up, inventory is fetched from a local hard coded array of inventory
 #### Configuring inventory provider
 
 Update **utils/inventoryProvider.js** with your own inventory provider.
+
+### suggestions on To-dos:
+
+1 change current pictures
+
+2 add more items
+
+2 Change Logo
+
+3 change theme

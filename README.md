@@ -36,7 +36,7 @@ Click [here](https://www.ecommerce.dev/) to see a live preview.
 1. Clone the project
 
 ```sh
-$ git clone https://github.com/cms/ecommerce.git
+$ git clone https://github.com/bladerunnersde/ecommerce.git
 ```
 
 2. Install the dependencies:
@@ -57,14 +57,6 @@ $ npm run dev
 # or to build
 
 $ npm run build
-```
-
-## Deploy to Vercel
-
-Use the [Vercel CLI](https://vercel.com/download)
-
-```sh
-vercel
 ```
 
 ## About the project

@@ -1,10 +1,8 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import SignUp from "../components/formComponents/SignUp"
 import ConfirmSignUp from "../components/formComponents/ConfirmSignUp"
 import SignIn from "../components/formComponents/SignIn"
 import Inventory from "../components/Inventory"
-
-import React, { useEffect, useState } from "react"
 
 function Admin() {
   const [formState, setFormState] = useState("signUp")

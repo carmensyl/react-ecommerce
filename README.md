@@ -6,31 +6,6 @@ Out of the box, the site uses completely static data coming from a provider at `
 
 ![Home](example-images/1.png)
 
-### Live preview
-
-Click [here](https://www.ecommerce.dev/) to see a live preview.
-
-<details>
-  <summary>Other  ECommerce pages</summary>
-
-### Category view
-
-![Category view](example-images/2.png)
-
-### Item view
-
-![Item view](example-images/3.png)
-
-### Cart view
-
-![Cart view](example-images/4.png)
-
-### Admin panel
-
-![Admin panel](example-images/5.png)
-
-</details>
-
 ### Getting started
 
 1. Clone the project

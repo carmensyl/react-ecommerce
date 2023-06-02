@@ -106,6 +106,9 @@ class ContextProviderComponent extends React.Component {
         total: calculateTotal(cart),
       })
     )
+    toast("Successfully deleted from cart!", {
+      position: toast.POSITION.TOP_LEFT,
+    })
     this.forceUpdate()
   }
 

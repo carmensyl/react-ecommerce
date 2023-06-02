@@ -21,7 +21,7 @@ export default function Layout({ children, categories }) {
             <div className="mb-4 sm:mr-16 max-w-48 sm:max-w-none">
               <Link href="/">
                 <a aria-label="Home">
-                  <img src="/logo.png" alt="logo" width="90" height="28" />
+                  <img src="/logo.png" alt="logo" width="180" height="28" />
                 </a>
               </Link>
             </div>

@@ -6,7 +6,7 @@ import DENOMINATION from "../utils/currencyProvider"
 import { slugify } from "../utils/helpers"
 import QuantityPicker from "../components/QuantityPicker"
 import Image from "../components/Image"
-import Head from "next/head"
+import  from "next/head"
 import CartLink from "../components/CartLink"
 
 const Cart = ({ context }) => {

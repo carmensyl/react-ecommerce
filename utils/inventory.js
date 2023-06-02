@@ -3,7 +3,7 @@ import { v4 as uuid } from "uuid"
 let inventory = [
   {
     categories: ["new arrivals"],
-    name: "Timber Gray Sofa 2.0",
+    name: "Sony 2.0",
     price: "1000",
     image: "/products/couch1.png",
     description:
@@ -12,8 +12,8 @@ let inventory = [
     currentInventory: 4,
   },
   {
-    categories: ["sofas", "living room"],
-    name: "Carmel Brown Sofa",
+    categories: ["TVs", "studio room"],
+    name: "Sony for Google TV",
     price: "1000",
     image: "/products/couch5.png",
     description:
@@ -22,8 +22,8 @@ let inventory = [
     currentInventory: 2,
   },
   {
-    categories: ["new arrivals", "sofas"],
-    name: "Mod Leather Sofa",
+    categories: ["new arrivals", "TVs"],
+    name: "Sony",
     price: "800",
     image: "/products/couch6.png",
     description:
@@ -32,8 +32,8 @@ let inventory = [
     currentInventory: 8,
   },
   {
-    categories: ["new arrivals", "sofas"],
-    name: "Thetis Gray Love Seat",
+    categories: ["new arrivals", "TVs"],
+    name: "Sony BRAVIA XR",
     price: "900",
     image: "/products/couch7.png",
     description:
@@ -42,7 +42,7 @@ let inventory = [
     currentInventory: 10,
   },
   {
-    categories: ["on sale", "sofas"],
+    categories: ["on sale", "TVs"],
     name: "Sven Tan Matte",
     price: "1200",
     image: "/products/couch8.png",
@@ -52,8 +52,8 @@ let inventory = [
     currentInventory: 7,
   },
   {
-    categories: ["on sale", "sofas"],
-    name: "Otis Malt Sofa",
+    categories: ["on sale", "TVs"],
+    name: "Sumsung QLED",
     price: "500",
     image: "/products/couch9.png",
     description:
@@ -62,8 +62,8 @@ let inventory = [
     currentInventory: 13,
   },
   {
-    categories: ["on sale", "sofas"],
-    name: "Ceni Brown 3 Seater",
+    categories: ["on sale", "TVs"],
+    name: "Sumsung Crystal UHD",
     price: "650",
     image: "/products/couch10.png",
     description:
@@ -72,8 +72,8 @@ let inventory = [
     currentInventory: 9,
   },
   {
-    categories: ["sofas", "living room"],
-    name: "Jameson Jack Lounger",
+    categories: ["TVs", "studio room"],
+    name: "Sumsung Neo QLED",
     price: "1230",
     image: "/products/couch11.png",
     description:
@@ -83,8 +83,8 @@ let inventory = [
   },
 
   {
-    categories: ["sofas"],
-    name: "Galaxy Blue Sofa",
+    categories: ["TVs"],
+    name: "Galaxy Blue",
     price: "800",
     image: "/products/couch2.png",
     description:
@@ -93,8 +93,8 @@ let inventory = [
     currentInventory: 43,
   },
   {
-    categories: ["new arrivals", "sofas"],
-    name: "Markus Green Love Seat",
+    categories: ["new arrivals", "TVs"],
+    name: "Sony OLED",
     price: "900",
     image: "/products/couch3.png",
     description:
@@ -103,7 +103,7 @@ let inventory = [
     currentInventory: 2,
   },
   {
-    categories: ["on sale", "sofas"],
+    categories: ["on sale", "TVs"],
     name: "Dabit Matte Black",
     price: "1200",
     image: "/products/couch4.png",

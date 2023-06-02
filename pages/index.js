@@ -33,7 +33,7 @@ const Home = ({ inventoryData = [], categories: categoryData = [] }) => {
         flex lg:flex-row flex-col"
         >
           <div className="pt-4 pl-2 sm:pt-12 sm:pl-12 flex flex-col">
-            <Tag year="2021" category="SOFAS" />
+            <Tag year="2021" category="TV" />
             <Center
               price="200"
               title={inventory[2].name}

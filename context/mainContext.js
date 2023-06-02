@@ -1,27 +1,44 @@
-import { toast } from 'react-toastify'
-import React from 'react'
-const STORAGE_KEY = 'NEXT_ECOMMERCE_STARTER_'
+import { toast } from "react-toastify"
+import React from "react"
+const STORAGE_KEY = "NEXT_ECOMMERCE_STARTER_"
 
 const initialState = {
   cart: [],
   numberOfItemsInCart: 0,
-  total: 0
+  total: 0,
 }
 
 const SiteContext = React.createContext()
 
+// function calculateTotal(cart) {
+//   const total = cart.reduce((acc, next) => {
+//     const quantity = next.quantity
+//     acc = acc + JSON.parse(next.price) * quantity
+//     return acc
+//   }, 0)
+//   return total
+// }
 function calculateTotal(cart) {
   const total = cart.reduce((acc, next) => {
     const quantity = next.quantity
-    acc = acc + JSON.parse(next.price) * quantity
+    const price = JSON.parse(next.price)
+
+    if (isNaN(price)) {
+      // Handle cases where price is not a valid number
+      console.error(`Invalid price value: ${next.price}`)
+      return acc
+    }
+
+    acc = acc + price * quantity
     return acc
   }, 0)
+
   return total
 }
 
 class ContextProviderComponent extends React.Component {
   componentDidMount() {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       const storageState = window.localStorage.getItem(STORAGE_KEY)
       if (!storageState) {
         window.localStorage.setItem(STORAGE_KEY, JSON.stringify(initialState))
@@ -32,19 +49,24 @@ class ContextProviderComponent extends React.Component {
   setItemQuantity = (item) => {
     const storageState = JSON.parse(window.localStorage.getItem(STORAGE_KEY))
     const { cart } = storageState
-    const index = cart.findIndex(cartItem => cartItem.id === item.id)
+    const index = cart.findIndex((cartItem) => cartItem.id === item.id)
     cart[index].quantity = item.quantity
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify({
-      cart, numberOfItemsInCart: cart.length, total: calculateTotal(cart)
-    }))
+    window.localStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify({
+        cart,
+        numberOfItemsInCart: cart.length,
+        total: calculateTotal(cart),
+      })
+    )
     this.forceUpdate()
   }
 
-  addToCart = item => {
+  addToCart = (item) => {
     const storageState = JSON.parse(window.localStorage.getItem(STORAGE_KEY))
     const { cart } = storageState
     if (cart.length) {
-      const index = cart.findIndex(cartItem => cartItem.id === item.id)
+      const index = cart.findIndex((cartItem) => cartItem.id === item.id)
       if (index >= Number(0)) {
         /* If this item is already in the cart, update the quantity */
         cart[index].quantity = cart[index].quantity + item.quantity
@@ -57,11 +79,16 @@ class ContextProviderComponent extends React.Component {
       cart.push(item)
     }
 
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify({
-      cart, numberOfItemsInCart: cart.length, total: calculateTotal(cart)
-    }))
+    window.localStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify({
+        cart,
+        numberOfItemsInCart: cart.length,
+        total: calculateTotal(cart),
+      })
+    )
     toast("Successfully added item to cart!", {
-      position: toast.POSITION.TOP_LEFT
+      position: toast.POSITION.TOP_LEFT,
     })
     this.forceUpdate()
   }
@@ -69,11 +96,16 @@ class ContextProviderComponent extends React.Component {
   removeFromCart = (item) => {
     const storageState = JSON.parse(window.localStorage.getItem(STORAGE_KEY))
     let { cart } = storageState
-    cart = cart.filter(c => c.id !== item.id)
+    cart = cart.filter((c) => c.id !== item.id)
 
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify({
-      cart, numberOfItemsInCart: cart.length, total: calculateTotal(cart)
-    }))
+    window.localStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify({
+        cart,
+        numberOfItemsInCart: cart.length,
+        total: calculateTotal(cart),
+      })
+    )
     this.forceUpdate()
   }
 
@@ -84,7 +116,7 @@ class ContextProviderComponent extends React.Component {
 
   render() {
     let state = initialState
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       const storageState = window.localStorage.getItem(STORAGE_KEY)
       if (storageState) {
         state = JSON.parse(storageState)
@@ -92,20 +124,19 @@ class ContextProviderComponent extends React.Component {
     }
 
     return (
-      <SiteContext.Provider value={{
-        ...state,
-         addToCart: this.addToCart,
-         clearCart: this.clearCart,
-         removeFromCart: this.removeFromCart,
-         setItemQuantity: this.setItemQuantity
-      }}>
-       {this.props.children}
-     </SiteContext.Provider>
+      <SiteContext.Provider
+        value={{
+          ...state,
+          addToCart: this.addToCart,
+          clearCart: this.clearCart,
+          removeFromCart: this.removeFromCart,
+          setItemQuantity: this.setItemQuantity,
+        }}
+      >
+        {this.props.children}
+      </SiteContext.Provider>
     )
   }
 }
 
-export {
-  SiteContext,
-  ContextProviderComponent
-}
+export { SiteContext, ContextProviderComponent }

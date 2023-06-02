@@ -58,12 +58,12 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const category = params.name.replace(/-/g, " ")
-  const inventory = await inventoryForCategory(category)
+  // const category = params.name.replace(/-/g, " ")
+  const inventory = await inventoryForCategory("TVs")
   return {
     props: {
       inventory,
-      title: category,
+      title: "TVs",
     },
   }
 }

@@ -8,6 +8,7 @@ import QuantityPicker from "../components/QuantityPicker"
 import Image from "../components/Image"
 import Head from "next/head"
 import CartLink from "../components/CartLink"
+// import confirmRemoveFromCart from "../components/ConfirmRemoveFromCart"
 
 const Cart = ({ context }) => {
   const [renderClientSideComponent, setRenderClientSideComponent] =
@@ -29,6 +30,13 @@ const Cart = ({ context }) => {
     item.quantity = item.quantity - 1
     setItemQuantity(item)
   }
+
+  function confirmRemoveFromCart(item) {
+    let text = "Confirm taking out the item?";
+    if (confirm(text) == true) {
+      removeFromCart(item);
+    }
+}
 
   if (!renderClientSideComponent) return null
 
@@ -94,7 +102,7 @@ const Cart = ({ context }) => {
                         </div>
                         <div
                           role="button"
-                          onClick={() => removeFromCart(item)}
+                          onClick={() => confirmRemoveFromCart(item)}
                           className="
                             m-0 ml-10 text-gray-900 text-s cursor-pointer
                             "
@@ -141,7 +149,7 @@ const Cart = ({ context }) => {
                         </div>
                         <div
                           role="button"
-                          onClick={() => removeFromCart(item)}
+                          onClick={() => confirmRemoveFromCart()}
                           className="
                             m-0 ml-10 text-gray-900 text-s cursor-pointer mr-2
                             "
@@ -165,7 +173,7 @@ const Cart = ({ context }) => {
             <Link href="/checkout" className="flex flex-1 justify-end">
               <a aria-label="Check out">
                 <div className="cursor-pointer flex items-center">
-                  <p className="text-gray-600 text-sm mr-2">
+                  <p className="text-gray-600 text-base mr-2">
                     Proceed to check out
                   </p>
                   <FaLongArrowAltRight className="text-gray-600" />

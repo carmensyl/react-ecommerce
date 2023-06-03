@@ -8,7 +8,6 @@ import QuantityPicker from "../components/QuantityPicker"
 import Image from "../components/Image"
 import Head from "next/head"
 import CartLink from "../components/CartLink"
-// import confirmRemoveFromCart from "../components/ConfirmRemoveFromCart"
 
 const Cart = ({ context }) => {
   const [renderClientSideComponent, setRenderClientSideComponent] =

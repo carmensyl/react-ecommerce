@@ -31,7 +31,7 @@ const Cart = ({ context }) => {
   }
 
   function confirmRemoveFromCart(item) {
-    let text = "Confirm taking out the item?";
+    let text = "Confirm deleting the item?";
     if (confirm(text) == true) {
       removeFromCart(item);
     }
@@ -148,7 +148,7 @@ const Cart = ({ context }) => {
                         </div>
                         <div
                           role="button"
-                          onClick={() => confirmRemoveFromCart()}
+                          onClick={() => confirmRemoveFromCart(item)}
                           className="
                             m-0 ml-10 text-gray-900 text-s cursor-pointer mr-2
                             "

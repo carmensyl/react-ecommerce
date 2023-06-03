@@ -92,7 +92,7 @@ export default function Layout({ children, categories }) {
           >
             <Link href="/admin">
               <a aria-label="Admin panel">
-                <p className="text-sm font-semibold">Admins</p>
+                <p className="text-sm font-semibold text-white">Admins</p>
               </a>
             </Link>
           </div>

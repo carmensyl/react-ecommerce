@@ -21,7 +21,7 @@ class Inventory extends React.Component {
               <ViewInventory />
             ) : (<AddInventory />)
           }
-          <button onClick={this.props.signOut} className="mt-4 bg-primary hover:bg-black text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+          <button onClick={this.props.signOut} className="mt-4 bg-blue-600 text-white hover:bg-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
             Sign Out
           </button>
        </div>

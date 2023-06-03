@@ -38,7 +38,7 @@ class SignIn extends React.Component {
                   Forgot Password?
                 </a>
               </div>
-            </form>
+            </form> 
           </div>
         </div>
       </div>

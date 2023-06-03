@@ -23,7 +23,7 @@ let inventory = [
   },
   {
     categories: ["new arrivals", "TVs"],
-    name: "Sony",
+    name: "BRAVIA XR",
     price: "800",
     image: "/products/couch6.png",
     description:
@@ -33,7 +33,7 @@ let inventory = [
   },
   {
     categories: ["new arrivals", "TVs"],
-    name: "Sony BRAVIA XR",
+    name: "Sony BRAVIA XR LED",
     price: "900",
     image: "/products/couch7.png",
     description:

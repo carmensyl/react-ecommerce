@@ -97,7 +97,7 @@ class AddInventory extends React.Component {
                 <button onClick={this.addItem} className="bg-blue-600 text-white hover:bg-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
                   Add Item
                 </button>
-                <a onClick={this.clearForm} className="inline-block align-baseline font-bold text-sm" href="#">
+                <a onClick={this.clearForm} className="inline-block align-baseline font-bold text-sm hover:text-blue-600" href="#">
                   Clear Form
                 </a>
               </div>

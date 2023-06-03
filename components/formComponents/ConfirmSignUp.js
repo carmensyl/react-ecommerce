@@ -34,7 +34,7 @@ class ConfirmSignUp extends React.Component {
                 <button onClick={() => this.props.confirmSignUp(this.state)} className="bg-blue-600 text-white hover:bg-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
                   Confirm Sign Up
                 </button>
-                <a className="inline-block align-baseline font-bold text-sm" href="#">
+                <a className="inline-block align-baseline hover:bg-blue-600 font-bold text-sm" href="#">
                   Forgot Password?
                 </a>
               </div>

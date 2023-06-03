@@ -42,7 +42,7 @@ class SignUp extends React.Component {
                 <button onClick={() => this.props.signUp(this.state)} className="bg-blue-600 text-white hover:bg-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
                   Sign Up
                 </button>
-                <a className="inline-block align-baseline font-bold text-sm" href="#" onClick={() => this.props.toggleFormState('signIn')}>
+                <a className="inline-block align-baseline font-bold text-sm hover:text-blue-600" href="#" onClick={() => this.props.toggleFormState('signIn')}>
                   Already signed up?
                 </a>
               </div>
